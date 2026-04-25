@@ -1,0 +1,52 @@
+/* DoodleCraft — Animations */
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+@keyframes fadeOut { from{opacity:1} to{opacity:0} }
+@keyframes slideUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+@keyframes slideDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
+@keyframes slideInRight { from{opacity:0;transform:translateX(100px)} to{opacity:1;transform:translateX(0)} }
+@keyframes slideOutRight { from{opacity:1;transform:translateX(0)} to{opacity:0;transform:translateX(100px)} }
+@keyframes scaleIn { from{opacity:0;transform:scale(.85)} to{opacity:1;transform:scale(1)} }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+@keyframes floatSlow { 0%,100%{transform:translateY(0) rotate(0)} 33%{transform:translateY(-8px) rotate(2deg)} 66%{transform:translateY(4px) rotate(-1deg)} }
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes wiggle { 0%,100%{transform:rotate(0)} 15%{transform:rotate(6deg)} 30%{transform:rotate(-5deg)} 45%{transform:rotate(4deg)} 60%{transform:rotate(-2deg)} }
+@keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.05);opacity:.85} }
+@keyframes spin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+@keyframes blob { 0%,100%{border-radius:60% 40% 30% 70%/60% 30% 70% 40%} 50%{border-radius:50% 60% 30% 60%/40% 70% 60% 30%} }
+@keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@keyframes gradientMove { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+@keyframes dotPulse { 0%,100%{transform:scale(1);opacity:.4} 50%{transform:scale(1.6);opacity:1} }
+@keyframes ripple { 0%{transform:scale(0);opacity:.5} 100%{transform:scale(4);opacity:0} }
+
+.anim-fade-in{animation:fadeIn .4s var(--ease-out) both}
+.anim-slide-up{animation:slideUp .5s var(--ease-out) both}
+.anim-scale-in{animation:scaleIn .3s var(--ease-out) both}
+.anim-float{animation:float 3s ease-in-out infinite}
+.anim-float-slow{animation:floatSlow 5s ease-in-out infinite}
+.anim-bounce{animation:bounce .6s var(--ease-out)}
+.anim-wiggle{animation:wiggle .6s ease-in-out}
+.anim-pulse{animation:pulse 2s ease-in-out infinite}
+.anim-spin{animation:spin 1s linear infinite}
+.anim-blob{animation:blob 8s ease-in-out infinite}
+
+.stagger-1{animation-delay:.05s} .stagger-2{animation-delay:.1s} .stagger-3{animation-delay:.15s}
+.stagger-4{animation-delay:.2s} .stagger-5{animation-delay:.25s} .stagger-6{animation-delay:.3s}
+
+.hover-lift{transition:transform var(--transition),box-shadow var(--transition)}
+.hover-lift:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.hover-scale{transition:transform var(--transition-fast)}
+.hover-scale:hover{transform:scale(1.05)}
+.hover-glow:hover{box-shadow:0 0 20px rgba(255,107,157,.3),0 0 40px rgba(192,132,252,.15)}
+.hover-wiggle:hover{animation:wiggle .5s ease-in-out}
+.hover-bounce:hover{animation:bounce .5s var(--ease-out)}
+
+.animated-gradient{background-size:200% 200%;animation:gradientMove 4s ease infinite}
+
+.reveal{opacity:0;transform:translateY(30px);transition:all .6s var(--ease-out)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+.loading-dots{display:flex;gap:6px;align-items:center;justify-content:center}
+.loading-dots span{width:8px;height:8px;border-radius:50%;background:var(--primary);animation:dotPulse 1.4s ease-in-out infinite}
+.loading-dots span:nth-child(2){animation-delay:.2s}
+.loading-dots span:nth-child(3){animation-delay:.4s}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DoodleCraft — Create Amazing Doodle Art Online</title>
+  <meta name="description" content="DoodleCraft is a free online doodle art editor. Draw, create, and share beautiful doodles with intuitive tools, stickers, and more.">
+  <meta name="theme-color" content="#FF6B9D">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/editor.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav class="main-nav" id="main-nav">
+    <div class="nav-brand">
+      <span class="nav-logo">🪄</span>
+      <span class="nav-title">MagicCraft</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="nav-link active" data-page="home">Home</a>
+      <a href="#editor" class="nav-link" data-page="editor">Create</a>
+      <a href="#gallery" class="nav-link" data-page="gallery">Gallery</a>
+      <a href="#games" class="nav-link" data-page="games">Games</a>
+      <a href="#profile" class="nav-link" data-page="profile">Profile</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle dark mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Bottom Nav -->
+  <div class="mobile-nav">
+    <a href="#home" class="nav-link active" data-page="home">
+      <span class="nav-icon">🏠</span>Home
+    </a>
+    <a href="#editor" class="nav-link" data-page="editor">
+      <span class="nav-icon">✏️</span>Create
+    </a>
+    <a href="#gallery" class="nav-link" data-page="gallery">
+      <span class="nav-icon">🖼️</span>Gallery
+    </a>
+    <a href="#games" class="nav-link" data-page="games">
+      <span class="nav-icon">🎮</span>Games
+    </a>
+    <a href="#profile" class="nav-link" data-page="profile">
+      <span class="nav-icon">👤</span>Profile
+    </a>
+  </div>
+
+  <!-- ═══════════ MAIN CONTENT ═══════════ -->
+  <main id="app-main">
+
+    <!-- ─── HOME PAGE ─── -->
+    <section id="page-home" class="page active">
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <div class="hero-doodles">
+          <span class="hero-doodle">✏️</span>
+          <span class="hero-doodle">⭐</span>
+          <span class="hero-doodle">🌈</span>
+          <span class="hero-doodle">💜</span>
+          <span class="hero-doodle">🎵</span>
+          <span class="hero-doodle">✨</span>
+          <span class="hero-doodle">🦋</span>
+          <span class="hero-doodle">🌸</span>
+        </div>
+        <div class="hero-content">
+          <h1>Unleash Your <span class="text-gradient">Creativity</span></h1>
+          <p class="hero-subtitle">Draw, doodle, and create amazing art with our free online editor. No signup needed — just start creating!</p>
+          <a href="#editor" class="btn btn-primary btn-lg hover-bounce">Start Doodling ✏️</a>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="features-section">
+        <h2 class="reveal">Everything You Need to <span class="text-gradient">Create</span></h2>
+        <p class="section-subtitle reveal">Powerful tools wrapped in a fun, intuitive interface</p>
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <span class="feature-icon">✏️</span>
+            <h3>Drawing Tools</h3>
+            <p>Pen, brush, shapes, arrows — everything to bring your ideas to life with smooth, responsive strokes.</p>
+          </div>
+          <div class="feature-card reveal">
+            <span class="feature-icon">🎨</span>
+            <h3>Rich Colors</h3>
+            <p>Beautiful pastel palette plus a full color picker. Adjust opacity, stroke size, and patterns in real-time.</p>
+          </div>
+          <div class="feature-card reveal">
+            <span class="feature-icon">⭐</span>
+            <h3>Stickers & Text</h3>
+            <p>Add fun stickers, emojis, and handwritten text to make your doodles expressive and unique.</p>
+          </div>
+          <div class="feature-card reveal">
+            <span class="feature-icon">💾</span>
+            <h3>Save & Share</h3>
+            <p>Download your art as PNG or JPG. Save to your personal gallery and share with the world.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample Gallery Marquee -->
+      <div class="sample-section">
+        <h2 class="reveal">Get <span class="text-gradient">Inspired</span></h2>
+        <div style="overflow:hidden">
+          <div class="sample-marquee">
+            <div class="sample-card" style="background:linear-gradient(135deg,#FFD6E5,#FFB3CC)">🌸</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#E0BFFF,#C084FC)">🦄</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#B3F0FF,#67E8F9)">🌊</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#FFF3B0,#FFD93D)">☀️</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#D4EDDA,#6BCB77)">🌿</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#FFD6D6,#FF6B6B)">❤️</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#E0E7FF,#818CF8)">🌙</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#FFE4CC,#FFA45B)">🔥</div>
+            <!-- Duplicate for seamless loop -->
+            <div class="sample-card" style="background:linear-gradient(135deg,#FFD6E5,#FFB3CC)">🌸</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#E0BFFF,#C084FC)">🦄</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#B3F0FF,#67E8F9)">🌊</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#FFF3B0,#FFD93D)">☀️</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#D4EDDA,#6BCB77)">🌿</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#FFD6D6,#FF6B6B)">❤️</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#E0E7FF,#818CF8)">🌙</div>
+            <div class="sample-card" style="background:linear-gradient(135deg,#FFE4CC,#FFA45B)">🔥</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-section">
+        <h2 class="reveal">Ready to Create Something <span class="text-gradient">Amazing</span>?</h2>
+        <p class="reveal">Jump into the editor and let your imagination run wild. It's free, fast, and fun!</p>
+        <a href="#editor" class="btn btn-primary btn-lg hover-bounce reveal">Open Editor 🚀</a>
+      </div>
+    </section>
+
+    <!-- ─── EDITOR PAGE ─── -->
+    <section id="page-editor" class="page">
+      <div class="editor-layout">
+
+        <!-- Top Bar -->
+        <div class="editor-topbar">
+          <div class="topbar-left">
+            <button class="topbar-btn" id="btn-undo" disabled data-tooltip="Undo (Ctrl+Z)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 105.64-8.36L1 10"/></svg>
+              Undo
+            </button>
+            <button class="topbar-btn" id="btn-redo" disabled data-tooltip="Redo (Ctrl+Shift+Z)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-5.64-8.36L23 10"/></svg>
+              Redo
+            </button>
+            <div class="separator"></div>
+            <button class="topbar-btn" id="btn-clear" data-tooltip="Clear Canvas">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6M14 11v6"/></svg>
+              Clear
+            </button>
+          </div>
+          <div class="topbar-center">
+            <input type="text" id="doodle-title" placeholder="Untitled Doodle" maxlength="50">
+          </div>
+          <div class="topbar-right">
+            <button class="topbar-btn btn-save" id="btn-save">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/></svg>
+              Save
+            </button>
+            <button class="topbar-btn" id="btn-download">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+            <button class="topbar-btn" id="btn-share">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Share
+            </button>
+            <!-- Mobile panel toggle -->
+            <button class="topbar-btn panel-toggle" id="btn-panel-toggle">
+              🎨
+            </button>
+          </div>
+        </div>
+
+        <!-- Left Toolbar -->
+        <div class="editor-toolbar" id="editor-toolbar">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Canvas Area -->
+        <div class="editor-canvas-container" id="canvas-container">
+          <!-- Canvas layers created by JS -->
+        </div>
+
+        <!-- Right Panel -->
+        <div class="editor-panel" id="editor-panel">
+          <!-- Populated by JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── GALLERY PAGE ─── -->
+    <section id="page-gallery" class="page">
+      <div class="gallery-page">
+        <div class="gallery-header">
+          <h2>Gallery</h2>
+          <div class="gallery-tabs">
+            <button class="gallery-tab active" data-tab="my">My Doodles</button>
+            <button class="gallery-tab" data-tab="community">Community</button>
+          </div>
+        </div>
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── GAMES PAGE ─── -->
+    <section id="page-games" class="page">
+      <div class="games-page">
+        <div class="games-header">
+          <h2>Magical Mini-Games</h2>
+          <p>Take a break and catch the Golden Snitch!</p>
+        </div>
+        <div class="game-container" id="snitch-game-container">
+          <div id="game-score">Score: <span id="snitch-score">0</span> | Time: <span id="snitch-time">30</span>s</div>
+          <button id="start-game-btn" class="btn btn-primary btn-lg">Start Game</button>
+          <div id="game-area"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROFILE PAGE ─── -->
+    <section id="page-profile" class="page">
+      <div class="profile-page">
+        <div class="profile-card">
+          <div class="profile-avatar" id="profile-avatar">🎨</div>
+          <input type="text" id="profile-name-input" placeholder="Your Name" maxlength="30">
+          <div class="profile-stats">
+            <div class="stat-item">
+              <span class="stat-value" id="doodle-count">0</span>
+              <span class="stat-label">Doodles</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" id="storage-used">0 KB</span>
+              <span class="stat-label">Storage</span>
+            </div>
+          </div>
+          <div class="profile-actions">
+            <a href="#editor" class="btn btn-primary btn-sm">New Doodle ✏️</a>
+            <a href="#gallery" class="btn btn-secondary btn-sm">View Gallery 🖼️</a>
+          </div>
+        </div>
+        <div id="profile-gallery"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════ MODAL ═══════════ -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ TOAST CONTAINER ═══════════ -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ═══════════ SCRIPTS ═══════════ -->
+  <script src="js/storage.js"></script>
+  <script src="js/canvas-engine.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/customization.js"></script>
+  <script src="js/export.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

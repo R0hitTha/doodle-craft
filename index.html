@@ -230,13 +230,68 @@
       <div class="games-page">
         <div class="games-header">
           <h2>Magical Mini-Games</h2>
-          <p>Take a break and catch the Golden Snitch!</p>
+          <div class="gallery-tabs" id="game-tabs" style="margin-top: 16px;">
+            <button class="gallery-tab active" data-game="snitch">Catch the Snitch</button>
+            <button class="gallery-tab" data-game="runner">Hogwarts Runner</button>
+            <button class="gallery-tab" data-game="flappy">Flappy Broom</button>
+          </div>
         </div>
-        <div class="game-container" id="snitch-game-container">
+        
+        <!-- Game 1: Catch the Snitch -->
+        <div class="game-container active-game" id="snitch-game-container">
           <div id="game-score">Score: <span id="snitch-score">0</span> | Time: <span id="snitch-time">30</span>s</div>
-          <button id="start-game-btn" class="btn btn-primary btn-lg">Start Game</button>
+          <button id="start-game-btn" class="btn btn-primary btn-lg">Start Snitch Game</button>
           <div id="game-area"></div>
         </div>
+
+        <!-- Game 2: Hogwarts Runner (3D) -->
+        <div class="game-container" id="runner-game-container" style="display: none; padding: 0; background-color: #000; border: 2px solid var(--accent-yellow);">
+          <div id="runner-score-board" style="position: absolute; top: var(--space-md); left: var(--space-md); font-family: var(--font-display); font-size: 1.5rem; color: var(--accent-yellow); z-index: 10; text-shadow: 0 0 10px #000; display:none;">Score: <span id="runner-score">0</span></div>
+          
+          <div id="runner-selection-screen" style="position: absolute; inset: 0; background: rgba(0,0,0,0.85); z-index: 30; display: flex; flex-direction: column; align-items: center; justify-content: center; backdrop-filter: blur(5px);">
+            <h3 style="color: gold; margin-bottom: 15px; font-family: var(--font-display);">Choose Your Runner</h3>
+            <div style="display: flex; gap: 15px; margin-bottom: 25px;">
+              <img class="char-select active" data-img="images/harry_sticker_1777102259714.png" src="images/harry_sticker_1777102259714.png" width="70" style="border: 3px solid gold; border-radius: 50%; cursor: pointer; transition: transform 0.2s; background: rgba(255,255,255,0.2);">
+              <img class="char-select" data-img="images/hermione_sticker_1777102279849.png" src="images/hermione_sticker_1777102279849.png" width="70" style="border: 3px solid transparent; border-radius: 50%; cursor: pointer; transition: transform 0.2s; background: rgba(255,255,255,0.2);">
+              <img class="char-select" data-img="images/ron_sticker_1777102323126.png" src="images/ron_sticker_1777102323126.png" width="70" style="border: 3px solid transparent; border-radius: 50%; cursor: pointer; transition: transform 0.2s; background: rgba(255,255,255,0.2);">
+            </div>
+            
+            <h3 style="color: red; margin-bottom: 15px; font-family: var(--font-display);">Choose Your Chaser</h3>
+            <div style="display: flex; gap: 15px; margin-bottom: 30px;">
+              <img class="villain-select active" data-img="images/voldemort_sticker_1777104400035.png" src="images/voldemort_sticker_1777104400035.png" width="70" style="border: 3px solid red; border-radius: 50%; cursor: pointer; transition: transform 0.2s; background: rgba(255,0,0,0.2);">
+              <img class="villain-select" data-img="images/draco_sticker_1777104493689.png" src="images/draco_sticker_1777104493689.png" width="70" style="border: 3px solid transparent; border-radius: 50%; cursor: pointer; transition: transform 0.2s; background: rgba(255,0,0,0.2);">
+              <img class="villain-select" data-img="images/snape_sticker_1777102386855.png" src="images/snape_sticker_1777102386855.png" width="70" style="border: 3px solid transparent; border-radius: 50%; cursor: pointer; transition: transform 0.2s; background: rgba(255,0,0,0.2);">
+            </div>
+            
+            <button id="start-runner-btn" class="btn btn-primary btn-lg">Start 3D Runner</button>
+          </div>
+
+          <div id="runner-game-area" style="position: absolute; inset: 0; overflow: hidden; touch-action: none;">
+            <!-- Three.js Canvas injected here -->
+          </div>
+        </div>
+
+        <!-- Game 3: Flappy Broom (3D) -->
+        <div class="game-container" id="flappy-game-container" style="display: none; padding: 0; background-color: #87CEEB; border: 2px solid var(--accent-yellow);">
+          <div id="flappy-score-board" style="position: absolute; top: var(--space-md); left: var(--space-md); font-family: var(--font-display); font-size: 1.5rem; color: #fff; z-index: 10; text-shadow: 0 0 10px #000; display:none;">Score: <span id="flappy-score">0</span></div>
+          
+          <div id="flappy-selection-screen" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); z-index: 30; display: flex; flex-direction: column; align-items: center; justify-content: center; backdrop-filter: blur(5px);">
+            <h3 style="color: gold; margin-bottom: 15px; font-family: var(--font-display); text-shadow: 0 0 10px #000;">Choose Your Flyer</h3>
+            <div style="display: flex; gap: 15px; margin-bottom: 25px;">
+              <img class="flappy-char-select active" data-img="images/harry_sticker_1777102259714.png" src="images/harry_sticker_1777102259714.png" width="70" style="border: 3px solid gold; border-radius: 50%; cursor: pointer; transition: transform 0.2s; background: rgba(255,255,255,0.2);">
+              <img class="flappy-char-select" data-img="images/hermione_sticker_1777102279849.png" src="images/hermione_sticker_1777102279849.png" width="70" style="border: 3px solid transparent; border-radius: 50%; cursor: pointer; transition: transform 0.2s; background: rgba(255,255,255,0.2);">
+              <img class="flappy-char-select" data-img="images/ron_sticker_1777102323126.png" src="images/ron_sticker_1777102323126.png" width="70" style="border: 3px solid transparent; border-radius: 50%; cursor: pointer; transition: transform 0.2s; background: rgba(255,255,255,0.2);">
+            </div>
+            
+            <button id="start-flappy-btn" class="btn btn-primary btn-lg">Start Flappy Broom</button>
+            <p style="color: white; margin-top: 20px; font-weight: bold; text-shadow: 0 0 5px black;">Tap or Press Space to fly!</p>
+          </div>
+
+          <div id="flappy-game-area" style="position: absolute; inset: 0; overflow: hidden; touch-action: none;">
+            <!-- Three.js Canvas injected here -->
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -279,6 +334,9 @@
   <div class="toast-container" id="toast-container"></div>
 
   <!-- ═══════════ SCRIPTS ═══════════ -->
+  <!-- Three.js for 3D Mini-Game -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
   <script src="js/storage.js"></script>
   <script src="js/canvas-engine.js"></script>
   <script src="js/tools.js"></script>
